@@ -1,0 +1,359 @@
+{
+  "image_id": "sha256:a5df6f7ff5a8832925a9082d63e94c08d0d908999b7ce0137617af39f9c4f739",
+  "mode": "fixture",
+  "run_id": "contest-104-fixture",
+  "tasks": "A",
+  "rounds": 1,
+  "local_host_sha256": "sha256:39a3b5b7540a57d8a94b1e4640d6fd6adfd96d1dbaa275dd2beba39dde558db2",
+  "model": "Qwen/Qwen3.8-27B",
+  "memory_gib": 4,
+  "cpus": 2,
+  "passed": true,
+  "describe": {
+    "protocol": "contest.harness.workspace.v2",
+    "model_access": "host_gateway_rpc",
+    "sdk": "contest_harness",
+    "sdk_version": "1.0.4",
+    "tasks": [
+      "classification",
+      "regression"
+    ]
+  },
+  "runs": {
+    "A": {
+      "baseline": {
+        "macro_f1": 0.7140297220788709,
+        "accuracy": 0.8786173633440515,
+        "acetaldehyde_tp": 0,
+        "acetaldehyde_n": 109
+      },
+      "final": {
+        "macro_f1": 0.7140297220788709,
+        "accuracy": 0.8786173633440515,
+        "acetaldehyde_tp": 0,
+        "acetaldehyde_n": 109
+      },
+      "final_artifact": {
+        "artifact_id": "baseline-A",
+        "artifact": {
+          "checkpoint_paths": [
+            "checkpoint.npz"
+          ],
+          "code_paths": [],
+          "predict_argv": [
+            "python3",
+            "/app/harness.py",
+            "predict"
+          ]
+        },
+        "files": [
+          {
+            "path": "checkpoint.npz",
+            "sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+            "size_bytes": 132180
+          }
+        ]
+      },
+      "rounds": [
+        {
+          "selected_artifact_id": "baseline-A",
+          "hypothesis": "Bounded source-only update may improve the current stage against the inherited model.",
+          "change_summary": "Tested decay_pair from the mounted parent on this round's authorized training projection.",
+          "reason": "kept_parent; model call fixture-A-1; valid decision=False; paired macro_f1 gain=0.16659217975007445; positive means improvement; eligible=True; failure=None.",
+          "configuration": {
+            "dataset": "A",
+            "round": 1,
+            "stage": "public-replay",
+            "parent_artifact_id": "baseline-A",
+            "parent_checkpoint_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+            "train_sha256": "sha256:c724014feb2c968d144e167f4997d2ad2125df3825abf4306c9c87c8f08de6c0",
+            "parent_files_sha256": [
+              "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+              null
+            ],
+            "action": "decay_pair",
+            "train_rows": 445,
+            "changed_native_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+            "recipe": {
+              "epochs": 0,
+              "solver_fits": 1,
+              "gate": [
+                0,
+                3
+              ],
+              "support": 66
+            },
+            "model_name": "Qwen/Qwen3.8-27B",
+            "eligible_child": true,
+            "measurement_ids": [
+              "local-A-1-m1",
+              "local-A-1-m2"
+            ],
+            "paired_parent": {
+              "macro_f1": 0.7140297220788709,
+              "accuracy": 0.8786173633440515
+            },
+            "measured_child": {
+              "macro_f1": 0.8806219018289454,
+              "accuracy": 0.9445337620578779
+            },
+            "positive_is_better_gain": 0.16659217975007445,
+            "error": null,
+            "selection": "kept_parent",
+            "proposal": null,
+            "gateway_token_usage": {},
+            "selected_artifact_id": "baseline-A",
+            "cpu_seconds": 0.7301257729999999,
+            "participant_wall_seconds": 2.2739523490017746
+          },
+          "history_ids": [],
+          "model_call_ids": [
+            "fixture-A-1"
+          ],
+          "seed": 42,
+          "id": "history-A-1",
+          "trace": [
+            "history_request",
+            "upload_begin_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_finish_request",
+            "candidate_request",
+            "upload_begin_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_chunk_request",
+            "upload_finish_request",
+            "candidate_request",
+            "model_request",
+            "upload_begin_request",
+            "upload_chunk_request",
+            "upload_finish_request",
+            "state_request",
+            "round_complete"
+          ],
+          "measurements": [
+            {
+              "artifact_id": "local-A-1-m1",
+              "metrics": {
+                "macro_f1": 0.7140297220788709,
+                "accuracy": 0.8786173633440515,
+                "acetaldehyde_tp": 0,
+                "acetaldehyde_n": 109
+              },
+              "cached_identical_artifact": true,
+              "artifact": {
+                "artifact_id": "local-A-1-m1",
+                "artifact": {
+                  "checkpoint_paths": [
+                    "checkpoint.npz"
+                  ],
+                  "code_paths": [],
+                  "predict_argv": [
+                    "python3",
+                    "/app/harness.py",
+                    "predict"
+                  ]
+                },
+                "files": [
+                  {
+                    "path": "checkpoint.npz",
+                    "sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                    "size_bytes": 132180
+                  }
+                ]
+              },
+              "declaration": {
+                "dataset": "A",
+                "round": 1,
+                "stage": "public-replay",
+                "parent_artifact_id": "baseline-A",
+                "parent_checkpoint_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                "train_sha256": "sha256:c724014feb2c968d144e167f4997d2ad2125df3825abf4306c9c87c8f08de6c0",
+                "parent_files_sha256": [
+                  "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                  null
+                ],
+                "action": "decay_pair",
+                "train_rows": 445,
+                "changed_native_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                "role": "paired_parent"
+              }
+            },
+            {
+              "artifact_id": "local-A-1-m2",
+              "metrics": {
+                "macro_f1": 0.8806219018289454,
+                "accuracy": 0.9445337620578779,
+                "acetaldehyde_tp": 105,
+                "acetaldehyde_n": 109
+              },
+              "cached_identical_artifact": false,
+              "artifact": {
+                "artifact_id": "local-A-1-m2",
+                "artifact": {
+                  "checkpoint_paths": [
+                    "checkpoint.npz",
+                    "extension.npz"
+                  ],
+                  "code_paths": [],
+                  "predict_argv": [
+                    "python3",
+                    "/app/harness.py",
+                    "predict"
+                  ]
+                },
+                "files": [
+                  {
+                    "path": "checkpoint.npz",
+                    "sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                    "size_bytes": 132180
+                  },
+                  {
+                    "path": "extension.npz",
+                    "sha256": "sha256:407f839ae99acbe3d8360a9b06fc313422a4a6a9d1bc5069466b30d4d0ebe964",
+                    "size_bytes": 27887
+                  }
+                ]
+              },
+              "declaration": {
+                "dataset": "A",
+                "round": 1,
+                "stage": "public-replay",
+                "parent_artifact_id": "baseline-A",
+                "parent_checkpoint_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                "train_sha256": "sha256:c724014feb2c968d144e167f4997d2ad2125df3825abf4306c9c87c8f08de6c0",
+                "parent_files_sha256": [
+                  "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                  null
+                ],
+                "action": "decay_pair",
+                "train_rows": 445,
+                "changed_native_sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                "recipe": {
+                  "epochs": 0,
+                  "solver_fits": 1,
+                  "gate": [
+                    0,
+                    3
+                  ],
+                  "support": 66
+                }
+              }
+            }
+          ],
+          "new_state_sha256": "sha256:02ef48ab39f387406388579ffbd6be2ad9cac78dcfaf2964c452b9d6c83739da",
+          "parent_state_sha256": null,
+          "upload_chunks": 12,
+          "bytes_uploaded": {
+            "candidate": 292247,
+            "state": 1407
+          },
+          "qwen": {
+            "call_id": "fixture-A-1",
+            "request": {
+              "facts": {
+                "dataset": "A",
+                "round": 1,
+                "metric": "macro_f1",
+                "direction": "maximize",
+                "action": "decay_pair",
+                "paired_parent": {
+                  "macro_f1": 0.7140297220788709,
+                  "accuracy": 0.8786173633440515
+                },
+                "child": {
+                  "macro_f1": 0.8806219018289454,
+                  "accuracy": 0.9445337620578779
+                },
+                "positive_is_better_gain": 0.16659217975007445,
+                "eligible_child": true,
+                "failure": null,
+                "candidate_actions_for_next_round": [
+                  "decay_pair",
+                  "decay_triad",
+                  "adam_small",
+                  "adam_tiny"
+                ],
+                "next_if_parent": [
+                  "decay_triad",
+                  "adam_small",
+                  "adam_tiny"
+                ],
+                "next_if_child": [
+                  "decay_pair",
+                  "decay_triad",
+                  "adam_small",
+                  "adam_tiny"
+                ],
+                "history_checkpoint_count": 0,
+                "recent_host_history": [],
+                "recent_attempts": []
+              }
+            },
+            "response": {
+              "choices": [
+                {
+                  "message": {
+                    "content": "{invalid fixture"
+                  }
+                }
+              ]
+            }
+          },
+          "selected": {
+            "artifact_id": "baseline-A",
+            "artifact": {
+              "checkpoint_paths": [
+                "checkpoint.npz"
+              ],
+              "code_paths": [],
+              "predict_argv": [
+                "python3",
+                "/app/harness.py",
+                "predict"
+              ]
+            },
+            "files": [
+              {
+                "path": "checkpoint.npz",
+                "sha256": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+                "size_bytes": 132180
+              }
+            ]
+          },
+          "selected_metrics": {
+            "macro_f1": 0.7140297220788709,
+            "accuracy": 0.8786173633440515,
+            "acetaldehyde_tp": 0,
+            "acetaldehyde_n": 109
+          },
+          "wall_seconds": 2.931348511017859
+        }
+      ],
+      "hashes": {
+        "parent": "sha256:fd1e08b2aad08b2e9754f9b2dfdc029481c0da7ecdedca0abb0ec6fcc818c757",
+        "train": "sha256:c724014feb2c968d144e167f4997d2ad2125df3825abf4306c9c87c8f08de6c0",
+        "validation": "sha256:6be1370388bf67d017f7426a51e149a65baf9bc1186f5f41f6731ce5006ffbee"
+      },
+      "validation_rows": 1244,
+      "accepted": 0,
+      "candidate_measurements": 2,
+      "real_local_candidate_fits": 1,
+      "new_full_prediction_passes": 3,
+      "elapsed_seconds": 11.741102397005307
+    }
+  },
+  "network": "none",
+  "scope": "local protocol fixture",
+  "image_bytes": 134914580,
+  "paid_request_count": 0,
+  "paid_charged_upper_cny": 0,
+  "official_scoring_ready": false
+}

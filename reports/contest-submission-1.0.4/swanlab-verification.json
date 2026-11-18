@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "id": "e822d02d9d51c0755d0470536696",
+  "workspace": "zxx12123",
+  "project": "zhixun-engine-dev",
+  "query": "zxx12123/zhixun-engine-dev/e822d02d9d51c0755d0470536696",
+  "state": "FINISHED",
+  "url": "https://swanlab.cn/@zxx12123/zhixun-engine-dev/runs/e822d02d9d51c0755d0470536696",
+  "scalar_checks": 16,
+  "acceptance_sha256": "sha256:558d171f249b05231ba2739a7780ac96dd1930a1683f0018b3603fd1e9323bb2"
+}

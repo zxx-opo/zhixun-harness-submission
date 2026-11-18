@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "image_id": "sha256:a5df6f7ff5a8832925a9082d63e94c08d0d908999b7ce0137617af39f9c4f739",
+  "run_id": "contest-104-release",
+  "model": "Qwen/Qwen3.8-27B",
+  "acceptance_sha256": "sha256:558d171f249b05231ba2739a7780ac96dd1930a1683f0018b3603fd1e9323bb2",
+  "rounds": 30,
+  "host": "local public projection",
+  "provider_successes": 30,
+  "provider_attempts": 33,
+  "failed_attempts": [
+    {
+      "id": "contest-104-release-B-04",
+      "quantities_reserved": {
+        "prefill": 8192,
+        "sample": 224
+      },
+      "prices": {
+        "prefill": 8.41,
+        "sample": 25.29
+      },
+      "status": "failed_or_ambiguous",
+      "charged_upper_cny": 0.07455968,
+      "started_at": "2026-11-18T11:19:53.534453+00:00",
+      "metadata": {
+        "error_type": "RemoteDisconnected",
+        "http_status": null,
+        "seconds": 35.028307489003055
+      },
+      "finished_at": "2026-11-18T11:20:31.338530+00:00"
+    },
+    {
+      "id": "contest-104-release-C-02",
+      "quantities_reserved": {
+        "prefill": 8192,
+        "sample": 224
+      },
+      "prices": {
+        "prefill": 8.41,
+        "sample": 25.29
+      },
+      "status": "failed_or_ambiguous",
+      "charged_upper_cny": 0.07455968,
+      "started_at": "2026-11-18T11:25:56.475035+00:00",
+      "metadata": {
+        "error_type": "TrainerServiceError",
+        "http_status": null,
+        "seconds": 75.13424842699897
+      },
+      "finished_at": "2026-11-18T11:27:18.946214+00:00"
+    },
+    {
+      "id": "contest-104-release-C-07",
+      "quantities_reserved": {
+        "prefill": 8192,
+        "sample": 224
+      },
+      "prices": {
+        "prefill": 8.41,
+        "sample": 25.29
+      },
+      "status": "failed_or_ambiguous",
+      "charged_upper_cny": 0.07455968,
+      "started_at": "2026-11-18T11:39:56.595928+00:00",
+      "metadata": {
+        "error_type": "TrainerServiceError",
+        "error_kind": "timeout",
+        "http_status": null,
+        "seconds": 175.109863804013
+      },
+      "finished_at": "2026-11-18T11:43:02.289966+00:00"
+    }
+  ],
+  "parse_valid": 29,
+  "paired_rounds": 24,
+  "history_experiments": 21,
+  "accepted": 8,
+  "measurement_count": 48,
+  "largest_candidate_bytes": 160070,
+  "upload_chunks": 219,
+  "prompt_tokens": 38616,
+  "completion_tokens": 1203,
+  "missing_usage_count": 0,
+  "new_paid_upper_cny": 0.57886347,
+  "cumulative_paid_upper_cny": 9.14514244,
+  "approved_cny": 30.0,
+  "ledger_basis": "public unit rates; actual invoice unavailable",
+  "official_scoring_ready": false,
+  "offline_fixture": {
+    "run_id": "contest-104-fixture",
+    "scored_candidates": 2,
+    "kept_parent": true
+  }
+}

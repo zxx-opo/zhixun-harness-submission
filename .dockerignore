@@ -1,0 +1,12 @@
+runs
+reports
+deliverables
+provider
+.git
+.venv
+**/__pycache__
+tests
+.env
+**/.env
+**/.env.*
+**/*.env
